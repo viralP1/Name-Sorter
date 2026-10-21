@@ -1,5 +1,4 @@
-﻿
-namespace Name_Sorter.Services;
+﻿namespace Name_Sorter.Services;
 
 public sealed class NameFileService
 {

@@ -1,5 +1,4 @@
-﻿
-namespace Name_Sorter.Models;
+﻿namespace Name_Sorter.Models;
 
 public sealed class PersonName
 {

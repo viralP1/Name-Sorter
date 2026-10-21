@@ -1,5 +1,4 @@
-﻿
-using Name_Sorter.Models;
+﻿using Name_Sorter.Models;
 
 namespace Name_Sorter.Services;
 

@@ -58,4 +58,13 @@ public sealed class NameParserTests
         Assert.Throws<ArgumentException>(
             () => _parser.Parse("One Two Three Four Five"));
     }
+
+    [Fact]
+    public void Parse_WithFrenchAccentedName_ParsesSuccessfully()
+    {
+        var result = _parser.Parse("Élodie François");
+
+        Assert.Equal("Élodie", result.GivenNames[0]);
+        Assert.Equal("François", result.LastName);
+    }
 }

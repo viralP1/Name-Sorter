@@ -21,7 +21,7 @@ try
 
     var sortedNames = nameSorter.Sort(names);
 
-    foreach(var name in sortedNames)
+    foreach (var name in sortedNames)
     {
         Console.WriteLine(name);
     }
@@ -32,7 +32,7 @@ try
 
     return 0;
 }
-catch(Exception ex)
+catch (Exception ex)
 {
     Console.Error.WriteLine($"Error: {ex.Message}");
     return 1;

@@ -134,6 +134,16 @@ The application separates responsibilities into focused components:
 
 The solution intentionally avoids unnecessary abstractions or infrastructure because the problem domain is small. The focus is on clear responsibilities, readability, testability, and maintainability.
 
+## Name Character and Culture Considerations
+
+The application validates name structure rather than restricting specific characters.
+
+Real names may contain accented Unicode characters, apostrophes, hyphens, initials, or non-Latin characters. Because the assessment does not define a character policy, values are not rejected based on character content alone.
+
+Examples such as `Élodie Martin`, `Jean-Pierre Dupont`, and `Marie D'Amour` are supported.
+
+Sorting uses `StringComparer.OrdinalIgnoreCase` for deterministic, case-insensitive Unicode ordering. Culture-specific sorting such as `fr-CA` was not introduced because the assessment does not define locale-specific collation rules.
+
 ## Error Handling
 
 The application validates the command-line input and file contents.

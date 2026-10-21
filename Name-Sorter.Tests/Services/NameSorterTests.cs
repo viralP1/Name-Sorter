@@ -94,4 +94,25 @@ public sealed class NameSorterTests
         Assert.Throws<ArgumentNullException>(
             () => _sorter.Sort(null!));
     }
+
+    [Fact]
+    public void Sort_WithFrenchAccentedNames_SortsDeterministically()
+    {
+        var names = new[]
+        {
+        new PersonName(["Élodie"], "Martin"),
+        new PersonName(["François"], "Dubois"),
+        new PersonName(["Jean"], "Tremblay")
+    };
+
+        var result = _sorter.Sort(names);
+
+        Assert.Equal(
+            [
+                "François Dubois",
+                "Élodie Martin",
+                "Jean Tremblay"
+            ],
+            result.Select(name => name.ToString()));
+    }
 }
